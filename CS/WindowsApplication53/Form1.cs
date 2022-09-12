@@ -20,6 +20,7 @@ namespace WindowsApplication53
             PopulateTable();
             pivotGridControl1.RefreshData();
             pivotGridControl1.BestFit();
+            pivotGridControl1.OptionsView.ShowColumnGrandTotals = false;
         }
         private void PopulateTable()
         {
@@ -43,7 +44,7 @@ namespace WindowsApplication53
         {
             int groupIndex = GetGroupIndex((PivotGridControl)sender, e);
             if (groupIndex % 2 == 0)
-                e.Appearance.BackColor = Color.GreenYellow ;
+                e.Appearance.BackColor = Color.GreenYellow;
         }
 
         private int GetGroupIndex(PivotGridControl pivot, PivotCustomAppearanceEventArgs e)

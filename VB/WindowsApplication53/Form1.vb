@@ -18,6 +18,7 @@ Namespace WindowsApplication53
 			PopulateTable()
 			pivotGridControl1.RefreshData()
 			pivotGridControl1.BestFit()
+			pivotGridControl1.OptionsView.ShowColumnGrandTotals = False
 		End Sub
 		Private Sub PopulateTable()
 			Dim myTable As DataTable = dataSet1.Tables("Data")

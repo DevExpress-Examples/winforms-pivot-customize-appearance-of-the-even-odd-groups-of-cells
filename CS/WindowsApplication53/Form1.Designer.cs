@@ -29,6 +29,11 @@ namespace WindowsApplication53
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding1 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding2 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding3 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding4 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
+            DevExpress.XtraPivotGrid.DataSourceColumnBinding dataSourceColumnBinding5 = new DevExpress.XtraPivotGrid.DataSourceColumnBinding();
             this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new System.Data.DataSet();
@@ -61,6 +66,7 @@ namespace WindowsApplication53
             this.fieldValueY});
             this.pivotGridControl1.Location = new System.Drawing.Point(0, 0);
             this.pivotGridControl1.Name = "pivotGridControl1";
+            this.pivotGridControl1.OptionsData.DataProcessingEngine = DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Optimized;
             this.pivotGridControl1.OptionsView.ColumnTotalsLocation = DevExpress.XtraPivotGrid.PivotTotalsLocation.Near;
             this.pivotGridControl1.Size = new System.Drawing.Size(796, 292);
             this.pivotGridControl1.TabIndex = 0;
@@ -109,7 +115,8 @@ namespace WindowsApplication53
             // 
             this.fieldName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
             this.fieldName.AreaIndex = 0;
-            this.fieldName.FieldName = "Name";
+            dataSourceColumnBinding1.ColumnName = "Name";
+            this.fieldName.DataBinding = dataSourceColumnBinding1;
             this.fieldName.Name = "fieldName";
             // 
             // fieldYear
@@ -117,17 +124,18 @@ namespace WindowsApplication53
             this.fieldYear.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
             this.fieldYear.AreaIndex = 0;
             this.fieldYear.Caption = "Year";
-            this.fieldYear.FieldName = "Date";
-            this.fieldYear.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateYear;
+            dataSourceColumnBinding2.ColumnName = "Date";
+            dataSourceColumnBinding2.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateYear;
+            this.fieldYear.DataBinding = dataSourceColumnBinding2;
             this.fieldYear.Name = "fieldYear";
-            this.fieldYear.UnboundFieldName = "fieldDate";
             // 
             // fieldValueX
             // 
             this.fieldValueX.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
             this.fieldValueX.AreaIndex = 0;
             this.fieldValueX.Caption = "X";
-            this.fieldValueX.FieldName = "ValueX";
+            dataSourceColumnBinding3.ColumnName = "ValueX";
+            this.fieldValueX.DataBinding = dataSourceColumnBinding3;
             this.fieldValueX.Name = "fieldValueX";
             // 
             // fieldDate
@@ -135,17 +143,18 @@ namespace WindowsApplication53
             this.fieldDate.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
             this.fieldDate.AreaIndex = 1;
             this.fieldDate.Caption = "Date";
-            this.fieldDate.FieldName = "Date";
-            this.fieldDate.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.Date;
+            dataSourceColumnBinding4.ColumnName = "Date";
+            dataSourceColumnBinding4.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.Date;
+            this.fieldDate.DataBinding = dataSourceColumnBinding4;
             this.fieldDate.Name = "fieldDate";
-            this.fieldDate.UnboundFieldName = "fieldDate1";
             // 
             // fieldValueY
             // 
             this.fieldValueY.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
             this.fieldValueY.AreaIndex = 1;
             this.fieldValueY.Caption = "Y";
-            this.fieldValueY.FieldName = "ValueY";
+            dataSourceColumnBinding5.ColumnName = "ValueY";
+            this.fieldValueY.DataBinding = dataSourceColumnBinding5;
             this.fieldValueY.Name = "fieldValueY";
             this.fieldValueY.Options.ShowGrandTotal = false;
             // 
