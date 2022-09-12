@@ -8,7 +8,7 @@
 
 This example shows how to to apply a custom appearance to a set of cells, corresponding to the same field values. Even and odd sets of cells are painted with different colors. 
 
-![Pivot Grid](images/pivot-grid.png)
+![Pivot Grid](image/pivot-grid.png)
 
 ## Example Overview
 
