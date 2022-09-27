@@ -7,23 +7,18 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraPivotGrid;
 
-namespace WindowsApplication53
-{
-    public partial class Form1 : Form
-    {
-        public Form1()
-        {
+namespace WindowsApplication53 {
+    public partial class Form1 : Form {
+        public Form1() {
             InitializeComponent();
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
+        private void Form1_Load(object sender, EventArgs e) {
             PopulateTable();
             pivotGridControl1.RefreshData();
             pivotGridControl1.BestFit();
             pivotGridControl1.OptionsView.ShowColumnGrandTotals = false;
         }
-        private void PopulateTable()
-        {
+        private void PopulateTable() {
             DataTable myTable = dataSet1.Tables["Data"];
             myTable.Rows.Add(new object[] { "Aaa", DateTime.Today, 7, 3 });
             myTable.Rows.Add(new object[] { "Aaa", DateTime.Today.AddDays(1), 4, 1 });
@@ -40,25 +35,21 @@ namespace WindowsApplication53
             myTable.Rows.Add(new object[] { "Ccc", DateTime.Today.AddDays(1).AddYears(1), 22 });
         }
 
-        private void pivotGridControl1_CustomAppearance(object sender, DevExpress.XtraPivotGrid.PivotCustomAppearanceEventArgs e)
-        {
+        private void pivotGridControl1_CustomAppearance(object sender, DevExpress.XtraPivotGrid.PivotCustomAppearanceEventArgs e) {
             int groupIndex = GetGroupIndex((PivotGridControl)sender, e);
             if (groupIndex % 2 == 0)
                 e.Appearance.BackColor = Color.GreenYellow;
         }
 
-        private int GetGroupIndex(PivotGridControl pivot, PivotCustomAppearanceEventArgs e)
-        {
+        private int GetGroupIndex(PivotGridControl pivot, PivotCustomAppearanceEventArgs e) {
             PivotGridField[] columnFields = pivot.GetFieldsByArea(PivotArea.ColumnArea).ToArray();
             int groupIndex = -1;
             object[] previous = new object[ columnFields.Length ];
             object[] current = new object[columnFields.Length]; 
             GetValuesByIndex(pivot, columnFields, previous, 0);
-            for (int i = 1; i <= e.ColumnIndex ; i++)
-            {
+            for (int i = 1; i <= e.ColumnIndex ; i++) {
                 GetValuesByIndex(pivot, columnFields, current, i);
-                if (! ValuesEquals( previous,current))
-                {
+                if (! ValuesEquals( previous,current)) {
                     groupIndex++;
                     current.CopyTo(previous, 0);
                 }
@@ -67,25 +58,18 @@ namespace WindowsApplication53
             return groupIndex;
         }
 
-        private bool ValuesEquals(object[] previous, object[] current)
-        {
-            for (int i = 0; i < previous.Length ; i++)
-            {
+        private bool ValuesEquals(object[] previous, object[] current) {
+            for (int i = 0; i < previous.Length ; i++) {
                 if (!Equals(previous[i], current[i]))
                     return false;
             }
             return true;
         }
 
-        private void GetValuesByIndex(PivotGridControl pivot, PivotGridField[] fields, object[] current, int index)
-        {
-            for (int i = 0; i < fields.Length ; i++)
-            {
+        private void GetValuesByIndex(PivotGridControl pivot, PivotGridField[] fields, object[] current, int index) {
+            for (int i = 0; i < fields.Length ; i++) {
                 current[i] = pivot.GetFieldValue(fields[i], index);
             }
         }
-
-
-
     }
 }
