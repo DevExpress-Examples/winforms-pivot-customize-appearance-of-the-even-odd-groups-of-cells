@@ -15,7 +15,7 @@ This example shows how to to apply a custom appearance to a set of cells, corres
 Use the [PivotGridControl.GetFieldValue](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.GetFieldValue(DevExpress.XtraPivotGrid.PivotGridField-System.Int32)) method to get field value by a column index. Then, compare field values, corresponding to a processed cell, with field values, corresponding to a previous cell. Handle the [PivotGridControl.CustomAppearance](https://docs.devexpress.com/WindowsForms/DevExpress.XtraPivotGrid.PivotGridControl.CustomAppearance) event to paint an even cells group green-yelow.
 
 
-## Files to Look at
+## Files to Review
 <!-- default file list -->
 * [Form1.cs](./CS/WindowsApplication53/Form1.cs) (VB: [Form1.vb](./VB/WindowsApplication53/Form1.vb))
 * [Program.cs](./CS/WindowsApplication53/Program.cs) (VB: [Program.vb](./VB/WindowsApplication53/Program.vb))
