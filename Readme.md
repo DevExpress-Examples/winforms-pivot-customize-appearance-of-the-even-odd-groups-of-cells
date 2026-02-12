@@ -27,7 +27,7 @@ Use the [PivotGridControl.GetFieldValue](https://docs.devexpress.com/WindowsForm
 - [Pivot Grid for WinForms - Change the Field Value Header Background](https://github.com/DevExpress-Examples/how-to-change-the-field-value-header-appearance-backcolor-or-draw-it-manually-e2809)
 - [Pivot Grid for WinForms - Customize Cells](https://github.com/DevExpress-Examples/winforms-pivot-customize-cell)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-pivot-customize-appearance-of-the-even-odd-groups-of-cells&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-pivot-customize-appearance-of-the-even-odd-groups-of-cells&~~~was_helpful=no)
 
